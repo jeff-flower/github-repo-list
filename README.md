@@ -1,4 +1,10 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Getting started
+1. From the root of the project, install dependencies `npm i`
+2. Run the development server `npm start`
+
+## About this project
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and uses typescript. I chose typescript because I like the expressiveness and documentation it adds to a project and the [static testing](https://kentcdodds.com/blog/unit-vs-integration-vs-e2e-tests) it provides. I've also found it to be very helpful in taking on refactors as the code base grows. 
 
 ## Available Scripts
 
