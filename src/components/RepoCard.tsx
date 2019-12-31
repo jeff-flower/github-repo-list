@@ -8,9 +8,14 @@ interface RepoCardProps {
 
 export const RepoCard: React.FC<RepoCardProps> = ({url, name, stars}) => {
   return (
-    <div>
-      <a href={url}>{name}</a>
-      <span>{`Stars ${stars}`}</span>
+    <div className="repo-card">
+      <div className="repo_card__header">
+        <span>{`Stars: ${stars}`}</span>
+      </div>
+      <div className="repo-card__content"></div>
+      <div className="repo-card__title">
+        <a href={url}>{name}</a>
+      </div>
     </div>
   );
 };

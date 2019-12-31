@@ -1,0 +1,22 @@
+.repo-card {
+  display: inline-block;
+  width: 200px;
+  text-align: center;
+  margin-right: 20px;
+}
+
+.repo_card__header {
+  height: 50px;
+}
+
+.repo-card__title {
+  margin-top:5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 50px;
+}
+
+.repo-card__content {
+  height: 200px;
+}

@@ -3,6 +3,8 @@ import React from 'react';
 import {mockRepos} from './mockRepos';
 import { RepoCard } from './RepoCard';
 
+import './repoList.css'
+
 // TODO: show loading spinner
 export const RepoContainer: React.FC<{}> = () => {
   return (
