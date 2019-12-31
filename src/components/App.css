@@ -1,0 +1,11 @@
+.app-header {
+  box-sizing: border-box;
+  height: 100px;
+  font-size: 24px;
+  padding: 10px;
+  text-align: center;
+}
+
+.app-main {
+  padding: 20px 40px;
+}
