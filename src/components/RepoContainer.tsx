@@ -11,6 +11,7 @@ export const RepoContainer: React.FC<{}> = () => {
     <div>
       {mockRepos().items.map(repo => (
         <RepoCard
+          key={repo.name}
           url={repo.html_url}
           name={repo.name}
           stars={repo.stargazers_count}
