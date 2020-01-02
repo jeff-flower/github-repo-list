@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './repoCard.css';
+
 interface RepoCardProps {
   url: string;
   name: string;

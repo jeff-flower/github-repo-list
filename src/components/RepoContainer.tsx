@@ -3,8 +3,6 @@ import React, {useState, useEffect} from 'react';
 import {getTopStarredRepos, mockGetTopStarredRepos} from '../githubServices';
 import { RepoCard } from './RepoCard';
 
-import './repoList.css'
-
 // TODO: show loading spinner
 export const RepoContainer: React.FC<{}> = () => {
   const [apiState, setApiState] = useState<{repos: any[], loading: boolean, error: boolean}>({
