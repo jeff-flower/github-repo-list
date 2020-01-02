@@ -5,6 +5,7 @@ import axios from 'axios';
 import {RepoContainer} from './RepoContainer';
 import {mockRepos} from '../mockRepos';
 
+// TODO: set up manual mocks if mocking axios gets out control
 jest.mock('axios');
 
 it('shows a loading notification', async () => {
