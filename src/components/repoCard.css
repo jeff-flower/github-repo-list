@@ -2,7 +2,9 @@
   display: inline-block;
   width: 200px;
   text-align: center;
-  margin-right: 20px;
+  margin: 0 20px 20px 0;
+  border: 1px solid black;
+  border-radius: 5px;
 }
 
 .repo_card__header {
@@ -19,4 +21,6 @@
 
 .repo-card__content {
   height: 200px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
 }
