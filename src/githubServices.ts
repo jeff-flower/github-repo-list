@@ -3,7 +3,6 @@ import axios from 'axios';
 import {mockRepos} from './mockRepos';
 
 export const getTopStarredRepos = async (): Promise<{items: any[], error: boolean}>=> {
-  console.log('calling github');
   try {
     // TODO: if we use more github endpoints, look in to configuring axios instance
     // https://github.com/axios/axios#creating-an-instance
@@ -18,15 +17,15 @@ export const getTopStarredRepos = async (): Promise<{items: any[], error: boolea
         per_page: 100
       }
     });
-
+    // TODO: what if there are no items?
     return {items: response.data.items, error: false};
   } catch(e) {
-    // TODO: 
+    // TODO: better error message? 
     return Promise.resolve({items: [], error: true});
   }
 };
 
-// TODO: look into axios.mock?
+// helper function for manual testing
 export const mockGetTopStarredRepos = async (error: boolean): Promise<{items: any[], error: boolean}>=> {
   if (!error) {
     return Promise.resolve({

@@ -7,34 +7,38 @@ import './repoList.css'
 
 // TODO: show loading spinner
 export const RepoContainer: React.FC<{}> = () => {
-  const [repoList, setRepoList] = useState<any[]>([]);
-  const [errorLoadingRepos, setErrorLoadingRepos] = useState(false);
+  const [apiState, setApiState] = useState<{repos: any[], loading: boolean, error: boolean}>({
+    repos: [],
+    loading: false,
+    error: false
+  });
   
-  // TODO: move to custom hook? may improve ability to test
+  // TODO: move to custom hook?
   // in the future could also create custom hook or use existing hooks library for 
   // making api calls
   useEffect(() => {
     const loadRepos = async () => {
       try {
-        const repos = await mockGetTopStarredRepos(false); 
+        setApiState({repos: [], loading: true, error: false});
+        const repos = await getTopStarredRepos(); 
         if (!repos.error) {
-          setRepoList(repos.items);
+          setApiState({repos: repos.items, loading: false, error: false});
         } else {
-          setErrorLoadingRepos(true);
+          setApiState({repos: [], loading: false, error: true});
         }
       } catch (e) {
-        setErrorLoadingRepos(true);
+        setApiState({repos: [], loading: false, error: true});
       }
     }
 
     loadRepos();
-  }, [setRepoList, setErrorLoadingRepos]);
+  }, [setApiState]);
 
   return (
     <div>
-      {!repoList && !errorLoadingRepos && <p>loading...</p>}
-      {errorLoadingRepos && <p>error loading repo list</p>}
-      {repoList && repoList.map(repo => (
+      {apiState.loading && <p>loading...</p>}
+      {apiState.error && <p>error loading repo list</p>}
+      {!apiState.loading && apiState.repos && apiState.repos.map(repo => (
         <RepoCard
           key={repo.name}
           url={repo.html_url}
