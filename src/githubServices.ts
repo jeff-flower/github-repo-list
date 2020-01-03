@@ -2,6 +2,7 @@ import axios from 'axios';
 
 import {mockRepos} from './mockRepos';
 
+// TODO: better type for items
 export const getTopStarredRepos = async (): Promise<{items: any[], error: boolean}>=> {
   try {
     // TODO: if we use more github endpoints, look in to configuring axios instance
