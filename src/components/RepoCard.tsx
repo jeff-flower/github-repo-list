@@ -9,6 +9,7 @@ interface RepoCardProps {
 }
 
 export const RepoCard: React.FC<RepoCardProps> = ({url, name, stars}) => {
+  // TODO: more expressive elements? accessibiity concerns?
   return (
     <div className="repo-card" data-testid="repoCard">
       <div className="repo_card__header">
