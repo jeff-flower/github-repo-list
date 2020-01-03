@@ -6,6 +6,14 @@
 ## About this project
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and uses typescript. I chose typescript because I like the expressiveness and documentation it adds to a project and the [static testing](https://kentcdodds.com/blog/unit-vs-integration-vs-e2e-tests) it provides. I've also found it to be very helpful in taking on refactors as the code base grows. 
 
+## Process
+I first used the provided github links and postman to test out the api calls that I would need to make. After that, I mocked the api call to get the list of top starred repos so I could focus on getting a card component working. I then connected the actual api call.
+
+## Future Work
+- Show the list of recent commits for a repo. The response from the call to get a list of repos includes the field 'commits_url'. Use this field to fetch the most recent commits when requested by the user and display the result in the content section of the card.
+- Finish adding tests. The RepoCard component needs tests, as does `githubServices.ts`. 
+- Improve styling (I'm so sorry). There are lots of card implementations available, which means lots of ideas for look and feel. [This](https://blog.prototypr.io/ui-case-study-state-styles-of-card-component-with-accessibility-in-mind-2f30137c6108) could be a good start.
+
 ## Available Scripts
 
 In the project directory, you can run:
