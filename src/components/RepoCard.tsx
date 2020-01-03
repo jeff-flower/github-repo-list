@@ -17,7 +17,7 @@ export const RepoCard: React.FC<RepoCardProps> = ({url, name, stars}) => {
       </div>
       <div className="repo-card__content"></div>
       <div className="repo-card__title">
-        <a href={url}>{name}</a>
+        <a href={url} target="blank">{name}</a>
       </div>
     </div>
   );
