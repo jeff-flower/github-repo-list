@@ -2,12 +2,16 @@
 ## Getting started
 1. From the root of the project, install dependencies `npm i`
 2. Run the development server `npm start`
+3. Navigate your browser to `localhost:3000`
 
-## About this project
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and uses typescript. I chose typescript because I like the expressiveness and documentation it adds to a project and the [static testing](https://kentcdodds.com/blog/unit-vs-integration-vs-e2e-tests) it provides. I've also found it to be very helpful in taking on refactors as the code base grows. 
+## What does it do? 
+The site displays the name, star count and a link to the top 100 Github repos by star count as cards in rows. The number of cards per row changes depending on the size of the browser window.
+
+## Technology used 
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and uses [typescript](https://www.typescriptlang.org/). I chose typescript because I like the expressiveness and documentation it adds to a project and the [static testing](https://kentcdodds.com/blog/unit-vs-integration-vs-e2e-tests) it provides. I've also found it to be very helpful in taking on refactors as the code base grows. [Axios](https://github.com/axios/axios) is used for http calls, and [React Testing Library](https://testing-library.com/docs/react-testing-library/intro) is used for testing.
 
 ## Process
-I first used the provided github links and postman to test out the api calls that I would need to make. After that, I mocked the api call to get the list of top starred repos so I could focus on getting a card component working. I then connected the actual api call.
+I first used the provided Github links and [Postman](https://www.getpostman.com/) to test out the api calls that I would need. After that, I mocked the api call to get the list of top starred repos so I could focus on getting a card component working. Finally I connected RepoContainer component to the the actual Github api call.
 
 ## Future Work
 - Show the list of recent commits for a repo. The response from the call to get a list of repos includes the field 'commits_url'. Use this field to fetch the most recent commits when requested by the user and display the result in the content section of the card.
